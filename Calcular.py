@@ -1,25 +1,28 @@
-#Calculadora
-################## 
-#Pedir o nome do usuário
-nome = str(input('Olá, qual é o seu nome?'))
+#Calculadora feita em python
 
-#Perguntar Qual operação ele vai fazer
-operacao = str(input('Escolha a operação que deseja realizar(+,-,*,/): '))
+#pedir o nome do usuário
+nome = str(input("Qual é o seu nome? "))
 
-#Pedir o primeiro e o segundo número
-n1 = float(input('Digite o primeiro número: '))
-n2 = float(input('Digite o segundo número: '))
+#Pedir a operação que ele deseja realizar
+operação = str(input("Qual das quatro operação você deseja realizar?"))
+operação = operação.upper()
+
+#Pedir os dois números para realizar a operação
+n1 = float(input("Digite o primeiro número:"))
+n2 = float(input("Digite o segundo número:"))
 
 #Realizar as operações necessárias
-if operacao == '+':
+if operação == "MAIS":
     soma = n1 + n2
-    print('{} a soma entre {} e {} é: {}'.format(nome, n1, n2, soma))
-elif operacao == '-':
-    sub = n1 - n2 
-    print('{} a subtração entre {} e {} é: {}'.format(nome, n1, n2, sub))
-elif operacao == '*':
+    print("{} a soma entre {} e {} é {}".format(nome, n1, n2, soma))
+elif "SUBTRAÇÃO":
+    sub = n1 - n2
+    print("{} a subtração entre {} e {} é {}".format(nome, n1, n2, sub))
+elif "MULTIPLICAÇÃO":
     mult = n1 * n2
-    print('{} a multiplicação entre {} e {} é: {}'.format(nome, n1, n2, mult))
-else:
+    print("{} a multiplicação entre {} e {} é {}".format(nome, n1, n2, mult))
+elif "DIVISÃO":
     div = n1 / n2
-    print('{} a divisão entre {} e {} é: {}'.format(nome, n1, n2, div))
+    print("{} a divisão entre {} e {} é {}".format(nome, n1, n2, div))
+else:
+    print("Operação inválida")
